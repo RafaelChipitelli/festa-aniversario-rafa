@@ -1,0 +1,55 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: ' ';
+        
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        height: 80px;
+    }
+
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
